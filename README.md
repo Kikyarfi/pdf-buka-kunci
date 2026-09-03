@@ -25,7 +25,7 @@ Gratis, tanpa akun, dan dokumen tidak diunggah ke server.
 
 <div align="center">
   <a href="https://kikyarfi.github.io/pdf-buka-kunci/">
-    <img src="og.png" alt="Preview aplikasi PDF Tanpa Kunci" width="820">
+    <img src="assets/app-preview.jpg" alt="Tampilan lengkap aplikasi PDF Tanpa Kunci" width="820">
   </a>
   <br>
   <sub>Klik gambar untuk membuka aplikasi.</sub>
@@ -224,9 +224,9 @@ Kamu juga dapat membuka halaman **[Issues](https://github.com/Kikyarfi/pdf-buka-
   <img src="https://github.com/Kikyarfi.png" width="110" alt="Foto profil Kikyarfi">
 </a>
 
-### Kiky Arfiyanto
+### @Kikyarfi
 
-Dibuat dan dikembangkan oleh **Kiky Arfiyanto**.
+Dibuat dan dikembangkan oleh **[@Kikyarfi](https://github.com/Kikyarfi)**.
 
 [![GitHub](https://img.shields.io/badge/GitHub-@Kikyarfi-181717?style=for-the-badge&logo=github)](https://github.com/Kikyarfi)
 [![Repository](https://img.shields.io/badge/Repository-PDF_Tanpa_Kunci-0780bd?style=for-the-badge&logo=github)](https://github.com/Kikyarfi/pdf-buka-kunci)
