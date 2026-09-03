@@ -38,7 +38,7 @@
   </main>
   <script src="qpdf.js"></script>
   <script>
-    const $=id=>document.getElementById(id),fileInput=$('fileInput'),drop=$('drop'),fileBox=$('fileBox'),fileName=$('fileName'),fileMeta=$('fileMeta'),clear=$('clear'),password=$('password'),authorized=$('authorized'),status=$('status'),action=$('action'),eye=$('eye');const wasmUrl=new URL('qpdf.wasm',document.baseURI).href;let selectedFile=null,downloadUrl=null;
+    const $=id=>document.getElementById(id),fileInput=$('fileInput'),drop=$('drop'),fileBox=$('fileBox'),fileName=$('fileName'),fileMeta=$('fileMeta'),clear=$('clear'),password=$('password'),authorized=$('authorized'),status=$('status'),action=$('action'),eye=$('eye');const wasmAsset=new URL('qpdf.wasm',document.baseURI);wasmAsset.searchParams.set('v','c7716c3');const wasmUrl=wasmAsset.href;let selectedFile=null,downloadUrl=null;
     const format=n=>n<1048576?`${Math.max(1,Math.round(n/1024))} KB`:`${(n/1048576).toFixed(1)} MB`;const outputName=n=>`${n.replace(/\.pdf$/i,'')||'document'}_origin.pdf`;
     function message(text,type=''){status.textContent=text;status.className=`status ${type}`}
     function update(){action.disabled=!(selectedFile&&password.value&&authorized.checked);if(!downloadUrl)action.querySelector('span').textContent='Proses PDF'}
