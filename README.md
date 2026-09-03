@@ -173,26 +173,6 @@ http://localhost:8000
 | `.nojekyll` | Mencegah pemrosesan Jekyll pada GitHub Pages |
 | `README.md` | Dokumentasi proyek |
 
-## 🌐 Deploy ke GitHub Pages
-
-<details>
-<summary><strong>Lihat langkah deployment</strong></summary>
-
-1. Buka **Settings** pada repository.
-2. Pilih menu **Pages**.
-3. Pada **Build and deployment**, pilih **Deploy from a branch**.
-4. Pilih branch `main` dan folder `/ (root)`.
-5. Klik **Save**.
-6. Tunggu proses deployment selesai.
-
-Alamat aplikasi:
-
-```text
-https://kikyarfi.github.io/pdf-buka-kunci/
-```
-
-</details>
-
 ## ⚠️ Batasan
 
 - Password PDF harus benar.
