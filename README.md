@@ -111,14 +111,14 @@ Aplikasi ini dirancang dengan pendekatan **local-first processing**:
 - URL sementara dibersihkan ketika file diganti atau halaman ditutup.
 
 > [!NOTE]
-> Build qpdf WebAssembly versi tetap `0.3.0` dimuat melalui CDN. File PDF dan tetap diproses secara lokal dan tidak dikirim ke CDN tersebut.
+> Build qpdf WebAssembly versi tetap `0.3.0` dimuat melalui CDN. File PDF dan password tetap diproses secara lokal dan tidak dikirim ke CDN tersebut.
 
 ## 🛠️ Teknologi
 
 | Teknologi | Fungsi |
 |---|---|
 | HTML5 | Struktur halaman dan input file |
-| CSS3 | Desain responsif dan responsif |
+| CSS3 | Desain visual dan tata letak responsif |
 | JavaScript | Validasi, interaksi, dan pengunduhan |
 | WebAssembly | Menjalankan mesin PDF di browser |
 | [qpdf](https://github.com/qpdf/qpdf) | Membaca dan mendekripsi PDF |
