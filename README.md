@@ -202,18 +202,6 @@ https://kikyarfi.github.io/pdf-buka-kunci/
 - Browser harus mendukung JavaScript dan WebAssembly.
 - Batas ukuran file aplikasi saat ini adalah 100 MB.
 
-## 🤝 Kontribusi
-
-Kontribusi, saran, dan laporan masalah sangat diterima.
-
-1. Fork repository ini.
-2. Buat branch fitur baru.
-3. Commit perubahan.
-4. Push branch tersebut.
-5. Ajukan pull request.
-
-Kamu juga dapat membuka halaman **[Issues](https://github.com/Kikyarfi/pdf-buka-kunci/issues)** untuk melaporkan bug atau memberikan saran.
-
 ---
 
 ## 👨‍💻 Author
