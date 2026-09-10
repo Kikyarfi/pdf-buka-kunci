@@ -39,13 +39,14 @@ Gratis, tanpa akun, dan dokumen tidak diunggah ke server.
 - [Privasi dan keamanan](#-privasi-dan-keamanan)
 - [Teknologi](#️-teknologi)
 - [Menjalankan secara lokal](#-menjalankan-secara-lokal)
+- [Aplikasi desktop](#️-aplikasi-desktop)
 - [Struktur repository](#-struktur-repository)
 - [Batasan](#️-batasan)
 - [Author](#-author)
 
 ## 📖 Tentang Aplikasi
 
-**PDF Tanpa Kunci** adalah aplikasi web ringan untuk membuat salinan PDF tanpa permintaan password. Pengguna tetap harus memasukkan password dokumen yang sah sebelum proteksi dapat dilepas.
+**PDF Tanpa Kunci** adalah aplikasi web dan desktop ringan untuk membuat salinan PDF tanpa permintaan password. Pengguna tetap harus memasukkan password dokumen yang sah sebelum proteksi dapat dilepas.
 
 Pemrosesan dilakukan menggunakan **qpdf yang dikompilasi ke WebAssembly**. Aplikasi berjalan sepenuhnya di browser dan tidak memerlukan backend.
 
@@ -111,7 +112,7 @@ Aplikasi ini dirancang dengan pendekatan **local-first processing**:
 - URL sementara dibersihkan ketika file diganti atau halaman ditutup.
 
 > [!NOTE]
-> Build qpdf WebAssembly versi tetap `0.3.0` dimuat melalui CDN. File PDF dan password tetap diproses secara lokal dan tidak dikirim ke CDN tersebut.
+> Build qpdf WebAssembly versi tetap `0.3.0` disertakan di dalam repository dan aplikasi desktop. Aplikasi dapat memproses PDF tanpa koneksi internet.
 
 ## 🛠️ Teknologi
 
@@ -123,6 +124,8 @@ Aplikasi ini dirancang dengan pendekatan **local-first processing**:
 | WebAssembly | Menjalankan mesin PDF di browser |
 | [qpdf](https://github.com/qpdf/qpdf) | Membaca dan mendekripsi PDF |
 | [qpdf-wasm](https://github.com/neslinesli93/qpdf-wasm) | Build qpdf untuk lingkungan browser |
+| Electron | Membungkus aplikasi menjadi aplikasi desktop |
+| electron-builder | Membuat installer Windows dan macOS |
 | GitHub Pages | Hosting aplikasi statis |
 
 ## 💻 Menjalankan Secara Lokal
@@ -161,6 +164,34 @@ http://localhost:8000
 > [!WARNING]
 > Jangan membuka `index.html` langsung melalui protokol `file://`. Gunakan web server lokal agar JavaScript dan WebAssembly dapat berjalan dengan benar.
 
+## 🖥️ Aplikasi Desktop
+
+Pastikan Node.js dan npm sudah terpasang, lalu jalankan:
+
+```bash
+npm install
+npm start
+```
+
+### Membuat installer
+
+Windows:
+
+```bash
+npm run dist:win
+```
+
+macOS (universal untuk Apple Silicon dan Intel):
+
+```bash
+npm run dist:mac
+```
+
+Installer akan dibuat di folder `dist`. Workflow **Build Desktop App** di GitHub Actions juga dapat dijalankan secara manual untuk menghasilkan installer Windows dan macOS.
+
+> [!NOTE]
+> Installer yang belum ditandatangani dapat memunculkan peringatan Windows SmartScreen atau macOS Gatekeeper. Penandatanganan kode memerlukan sertifikat pengembang masing-masing platform.
+
 ## 📁 Struktur Repository
 
 | Berkas | Keterangan |
@@ -170,6 +201,10 @@ http://localhost:8000
 | `og.png` | Gambar preview saat tautan dibagikan |
 | `qpdf.js` | Aset JavaScript qpdf lokal |
 | `qpdf.wasm` | Aset WebAssembly qpdf lokal |
+| `electron/main.js` | Proses utama dan jendela aplikasi desktop |
+| `build/icon.png` | Ikon aplikasi untuk proses build |
+| `package.json` | Dependensi dan konfigurasi installer desktop |
+| `.github/workflows/desktop-build.yml` | Build otomatis Windows dan macOS |
 | `.nojekyll` | Mencegah pemrosesan Jekyll pada GitHub Pages |
 | `README.md` | Dokumentasi proyek |
 
