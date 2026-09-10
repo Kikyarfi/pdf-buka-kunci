@@ -85,7 +85,7 @@ function createWindow() {
     item.resume();
   });
 
-  void window.loadURL(`${APP_ORIGIN}/index.html`);
+  void window.loadURL(`${APP_ORIGIN}/index.html?desktop=1`);
 }
 
 app.whenReady().then(async () => {

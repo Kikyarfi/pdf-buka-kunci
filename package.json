@@ -32,6 +32,7 @@
         "to": "app-ui",
         "filter": [
           "index.html",
+          "app.js",
           "favicon.svg",
           "qpdf.js",
           "qpdf.wasm",
