@@ -123,12 +123,15 @@ async function processPdf() {
     const code = qpdf.callMain([
       `--password=${password.value}`,
       '--decrypt',
+      '--warning-exit-0',
       '--',
       '/input.pdf',
       '/output.pdf',
     ]);
 
-    if (code !== 0) throw new Error(`EXIT_${code}`);
+    // qpdf exit code 3 means the PDF was processed with warnings.
+    // Keep validating the generated PDF instead of treating that as a failure.
+    if (code !== 0 && code !== 3) throw new Error(`EXIT_${code}`);
 
     stage = 'OUTPUT';
     const result = qpdf.FS.readFile('/output.pdf');
